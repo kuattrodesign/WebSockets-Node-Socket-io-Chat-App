@@ -1,0 +1,38 @@
+https://www.mindluster.com/lesson/5182
+
+//github
+https://github.com/iamshaunjp/websockets-playlist
+
+// iniciar a app
+npm init
+
+// instalar o modulo express e guardar
+npm install express --save
+
+// instalar o nodemon e guadar apenas para dev
+// isto serve para executarmos o comando nodemon index
+// e auto-atualiza as alterações
+npm install nodemon --save-dev
+
+// iniciar a escutar o servidor
+nodemon index
+
+// criar middlewares para o que mostrar
+// utilizando a static .. para mostrar a pasta public
+app.use(express.static('public'));
+
+// instalar o socketio no server e no cliente
+// para puder haver comunicação por socket
+npm install socket.io --save
+
+// criar no server em index.js a ligação
+var io = socket(server);
+
+// criar no cliente / frontend a ligação tb em chat.js e utilizar no index.html
+// utilizar a libraria 
+<script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+// alterar no chat.js
+var socket = io.connect('http://localhost:4000');
+
+
+
